@@ -94,7 +94,7 @@ dkms.conf
 .ionide
 
 # binary files
-!bin/
 bin/*
+!bin/.keep
 
 # End of https://www.toptal.com/developers/gitignore/api/c,c++,visualstudiocode
