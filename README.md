@@ -40,6 +40,7 @@ Then, on the client machine, simply connect SSH through the spoofer:
 ```
 ssh -p <SPOOFER_PORT> user@<SPOOFER_HOST/IP>
 ```
+It should open the SSH connection normally.
 
 For example spoofer on the same machine as client, despoofer in the same machine as the real server, exposed through public ip 8.7.6.5 port 8765:
 Client side, client on the same host:
@@ -54,3 +55,7 @@ Connect:
 ```
 ssh -p 9876 user@localhost
 ```
+
+### Notes on hosting
+Note that privileged ports 1-1023 requires sudo/root access to host the spoofer/despoofer on. Prefer higher ports.
+If executing on an on-premises environment, you might need to open the ports required to expose the traffic to outside LAN.
