@@ -1,0 +1,74 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "(gdb) Debug Receiver",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/bin/spoofer_debug",
+			"preLaunchTask": "build: debug",
+			"args": [
+				"127.0.0.1",
+				"9090",
+				"127.0.0.1",
+				"9191",
+				"SPOOFER",
+				"HTTP",
+			],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"externalConsole": false,
+			"MIMode": "gdb",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				},
+				{
+					"description": "Set Disassembly Flavor to Intel",
+					"text": "-gdb-set disassembly-flavor intel",
+					"ignoreFailures": true
+				},
+				{
+					"description": "Pass SIGINT signals to process",
+					"text": "handle SIGINT nostop print pass",
+					"ignoreFailures": false
+				},
+			]
+		},
+		{
+			"name": "(gdb) Debug Forwarder",
+			"type": "cppdbg",
+			"request": "launch",
+			"program": "${workspaceFolder}/bin/spoofer_debug",
+			"preLaunchTask": "build: debug",
+			"args": [
+				"127.0.0.1",
+				"9191",
+				"127.0.0.1",
+				"47",
+				"DESPOOFER",
+				"HTTP",
+			],
+			"stopAtEntry": false,
+			"cwd": "${workspaceFolder}",
+			"environment": [],
+			"externalConsole": false,
+			"MIMode": "gdb",
+			"setupCommands": [
+				{
+					"description": "Enable pretty-printing for gdb",
+					"text": "-enable-pretty-printing",
+					"ignoreFailures": true
+				},
+				{
+					"description": "Set Disassembly Flavor to Intel",
+					"text": "-gdb-set disassembly-flavor intel",
+					"ignoreFailures": true
+				}
+			]
+		}
+	]
+}
