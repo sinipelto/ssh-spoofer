@@ -95,6 +95,9 @@ dkms.conf
 
 # binary files
 bin/*
-!bin/.keep
+build/*
+
+# Keep keep files
+!**/.keep
 
 # End of https://www.toptal.com/developers/gitignore/api/c,c++,visualstudiocode

@@ -15,14 +15,19 @@ Despoofer will receive the packets to the real server residing preferably, in th
 
 ## Building instructions
 
-Simply build with gcc using C standard:
-```
-gcc -Wall -Wextra -Wpedantic -o bin/spoofer main.c
+Simply build the binary with make:
+```bash
+make
 ```
 
 Or build with DEBUG logging:
+```bash
+make debug
 ```
-gcc -Wall -Wextra -Wpedantic -DDEBUG -o bin/spoofer_debug main.c
+
+Remove any obsolete build stuff:
+```bash
+make clean
 ```
 
 Also VSCode settings pre-defined for building and debugging
