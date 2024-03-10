@@ -20,7 +20,7 @@ all: release
 debug: CFLAGS += -g3 -DDEBUG
 debug: $(ddir)/$(bind)
 
-release: CFLAGS += -O3
+release: CFLAGS += -O3 -s
 release: $(ddir)/$(binr)
 
 $(ddir)/$(bind): $(objs)
